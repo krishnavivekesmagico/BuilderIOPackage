@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "BuilderIOPackage",
             dependencies: []),
-        .testTarget(
-            name: "BuilderIOPackageTests",
-            dependencies: ["BuilderIOPackage"]),
     ]
 )
