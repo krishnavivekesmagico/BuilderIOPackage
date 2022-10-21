@@ -3,7 +3,7 @@ import SwiftUI
 public struct RenderContent: View {
     static var registered = false;
     
-    init(content: BuilderContent) {
+    public init(content: BuilderContent) {
         self.content = content
         if (!RenderContent.registered) {
             // TODO: move these out of here?
