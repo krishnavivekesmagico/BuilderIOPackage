@@ -1,16 +1,10 @@
 import SwiftUI
 
 @available(iOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImage")
-@available(macOS, deprecated: 12.0, renamed: "SwiftUI.AsyncImage")
-@available(tvOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImage")
-@available(watchOS, deprecated: 8.0, renamed: "SwiftUI.AsyncImage")
 public typealias AsyncImage = BackportAsyncImage
 
 
 @available(iOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImagePhase")
-@available(macOS, deprecated: 12.0, renamed: "SwiftUI.AsyncImagePhase")
-@available(tvOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImagePhase")
-@available(watchOS, deprecated: 8.0, renamed: "SwiftUI.AsyncImagePhase")
 public enum AsyncImagePhase {
     case empty
     case success(Image)
@@ -37,9 +31,6 @@ public enum AsyncImagePhase {
 
 // Credit: https://github.com/yutailang0119/SBPAsyncImage/blob/main/Sources/SBPAsyncImage/BackportAsyncImage.swift
 @available(iOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImage")
-@available(macOS, deprecated: 12.0, renamed: "SwiftUI.AsyncImage")
-@available(tvOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImage")
-@available(watchOS, deprecated: 8.0, renamed: "SwiftUI.AsyncImage")
 public struct BackportAsyncImage<Content: View>: View {
     private let url: URL?
     private let scale: CGFloat
@@ -138,7 +129,7 @@ private final class Provider: ObservableObject {
     }
 }
 
-@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+@available(iOS 14.0, *)
 private struct ContentBody<Content: View>: View {
     @StateObject private var provider = Provider()
     private let url: URL?
@@ -168,9 +159,6 @@ private struct ContentBody<Content: View>: View {
 }
 
 @available(iOS, deprecated: 14.0)
-@available(macOS, deprecated: 11.0)
-@available(tvOS, deprecated: 14.0)
-@available(watchOS, deprecated: 7.0)
 private struct ContentCompatBody<Content: View>: View {
     struct Body: View {
         @ObservedObject private var provider: Provider
