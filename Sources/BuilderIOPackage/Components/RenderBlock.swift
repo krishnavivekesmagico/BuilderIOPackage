@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 13.0, macOS 10.15, *)
 struct RenderBlock: View {
     var block: BuilderBlock
     var body: some View {
