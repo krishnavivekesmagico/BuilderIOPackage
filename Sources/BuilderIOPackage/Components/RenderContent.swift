@@ -27,7 +27,7 @@ public struct RenderContent: View {
     
     var content: BuilderContent
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading) {
             RenderBlocks(blocks: content.data.blocks)
         }
