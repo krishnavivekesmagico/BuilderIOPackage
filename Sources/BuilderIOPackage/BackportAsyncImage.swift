@@ -5,6 +5,7 @@ public typealias AsyncImage = BackportAsyncImage
 
 
 @available(iOS, deprecated: 15.0, renamed: "SwiftUI.AsyncImagePhase")
+@available(iOS 13.0, *)
 public enum AsyncImagePhase {
     case empty
     case success(Image)
